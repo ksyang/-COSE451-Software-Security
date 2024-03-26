@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 ENV user cose-451
 
 RUN apt-get update
-RUN apt-get -y install socat gcc gdb gcc-multilib git vim python3-pip
+RUN apt-get -y install socat gcc gdb gcc-multilib git vim python3-pip gdbserver
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install --upgrade pwntools
 
