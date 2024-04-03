@@ -32,6 +32,7 @@ RUN gcc -O0 -m32 -mpreferred-stack-boundary=2 -z execstack -no-pie -fno-pic -o p
 RUN chmod 755 /home/$user/class2/
 RUN chmod 770 /home/$user/class2/*.o
 RUN chmod 660 /home/$user/class2/*.c
+RUN chmod 660 /home/$user/class2/*.py
 
 RUN chown -R root:$user /home/$user/*
 
