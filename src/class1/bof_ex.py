@@ -1,6 +1,7 @@
 from pwn import *
 
 r = process('bof.o')
+print(type(r))
 
 leak = r.recvuntil('\n')[:-1]
 leak = leak.decode('utf-8')
