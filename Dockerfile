@@ -18,7 +18,7 @@ RUN gcc -O0 -m32 -fno-stack-protector -mpreferred-stack-boundary=2 -z execstack 
 RUN gcc -O0 -m32 -fno-stack-protector -mpreferred-stack-boundary=2 -z execstack -no-pie -fno-pic -o bof.o bof.c
 
 RUN chmod 755 /home/$user/
-RUN chmod 755 /home/$user/class1/
+RUN chmod 777 /home/$user/class1/
 RUN chmod 770 /home/$user/class1/*.o
 RUN chmod 660 /home/$user/class1/*.c
 
@@ -29,7 +29,7 @@ RUN gcc -O0 -m32 -fno-stack-protector -mpreferred-stack-boundary=2 -z execstack 
 RUN gcc -O0 -m32 -mpreferred-stack-boundary=2 -z execstack -no-pie -fno-pic -o canary.o canary.c
 RUN gcc -O0 -m32 -mpreferred-stack-boundary=2 -z execstack -no-pie -fno-pic -o practice.o practice.c
 
-RUN chmod 755 /home/$user/class2/
+RUN chmod 777 /home/$user/class2/
 RUN chmod 770 /home/$user/class2/*.o
 RUN chmod 660 /home/$user/class2/*.c
 RUN chmod 660 /home/$user/class2/*.py
